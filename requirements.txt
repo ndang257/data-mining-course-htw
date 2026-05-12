@@ -4,3 +4,7 @@ matplotlib
 openpyxl
 scikit-learn
 statsmodels
+seaborn
+pandas
+numpy
+xlrd

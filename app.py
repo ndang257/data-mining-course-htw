@@ -97,6 +97,19 @@ def home_page() -> None:
 		)
 
 
+	with tile_cols[3]:
+		render_tile(
+			title="04: Imputation of Missing Values",
+			description="Explore techniques for handling missing data, including mean, median, mode imputation, and more advanced methods.",
+			page_path="04_imputation_of_missing_values/module_04_app.py",
+			image_path="04_imputation_of_missing_values/images/04_cover.svg",
+			placeholder_text="Module preview",
+			notebook_label="Open in Colab",
+			notebook_link="https://colab.research.google.com/github/erickoziel/data-mining-course/blob/main/04_imputation_of_missing_values/module_04_main.ipynb",
+			key_prefix="module_04",
+		)
+
+
 home = st.Page(home_page, title="Home", icon=":material/home:", default=True)
 module_01 = st.Page(
 	"01_introduction_to_data_mining/module_01_app.py",
@@ -113,11 +126,16 @@ module_03 = st.Page(
 	title="Module 03: Transforming Variables",
 	icon=":material/looks_3:"
 )
+module_04 = st.Page(
+	"04_imputation_of_missing_values/module_04_app.py",
+	title="Module 04: Imputation of Missing Values",
+	icon=":material/looks_4:"
+)
 
 navigation = st.navigation(
 	{
 		"Course": [home],
-		"Modules": [module_01, module_02, module_03],
+		"Modules": [module_01, module_02, module_03, module_04],
 	}
 )
 
